@@ -14,7 +14,9 @@ spec:
         image: mycontainerregistryem.azurecr.io/egam1/demo:15
         ports:
         - containerPort: 80
-          name: nginx
+          name: nginx-demo
+        selector:
+          app: nginx
 
 ---
 kind: Service
