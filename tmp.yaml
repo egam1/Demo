@@ -1,0 +1,29 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-demo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nginx-demo
+    spec:
+      containers:
+      - name: nginx
+        image: mycontainerregistryem.azurecr.io/egam1/demo:15
+        ports:
+        - containerPort: 80
+          name: nginxa
+
+---
+kind: Service
+metadata:
+  name: nginx-demo
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+
+
