@@ -13,10 +13,32 @@ spec:
     metadata:
       labels:
         app: nginx0
+
+         "spec": {
+    "ports": [
+      {
+        "name": "tcp-80-80-98p9m",
+        "protocol": "TCP",
+        "port": 80,
+        "targetPort": 80,
+        "nodePort": 32533
+      }
+    ],
+    "selector": {
+      "k8s-app": "aks-demo1"
+    },
+    "clusterIP": "10.0.96.87",
+    "type": "LoadBalancer",
+    "sessionAffinity": "None",
+    "externalTrafficPolicy": "Cluster"
+  }, 
+
     spec:
       containers:
       - name: nginx
         image: mycontainerregistryem.azurecr.io/egam1/demo:15
         ports:
+        - port: 80
         - containerPort: 80
+
 
