@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-demo
@@ -17,7 +17,6 @@ spec:
           name: nginxa
 
 ---
-apiVersion: v1
 kind: Service
 metadata:
   name: nginx-demo
