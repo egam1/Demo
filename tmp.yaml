@@ -13,8 +13,9 @@ spec:
       - name: nginx
         image: mycontainerregistryem.azurecr.io/egam1/demo:15
         ports:
-          name: nginx-demo
-          port: 80
-          protocol: TCP
-          targetPort: 80
+        -  name: nginx-demo
+        -  containerPort: 80
+        -  port: 80
+        -  protocol: TCP
+        -  targetPort: 80
 
