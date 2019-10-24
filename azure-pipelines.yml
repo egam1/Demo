@@ -19,10 +19,11 @@ steps:
     echo completed wait
     dir
     echo %cd%
+    dir foo.txt /s
     echo $(Build.Repository.LocalPath)
     echo $(Build.SourcesDirectory)
     echo $(System.DefaultWorkingDirectory)
-  failOnStderr: true
+  failOnStderr: false
 
 - script: |
     echo %cd%
