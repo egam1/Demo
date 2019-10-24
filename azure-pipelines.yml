@@ -30,8 +30,10 @@ steps:
     cd $(Build.Repository.LocalPath)
     dir
     echo %cd%
+    cd foo
     cd $(Build.Repository.LocalPath)/packages
     dir
     echo %cd%
+    type foo.txt
   displayName: 'Run a multi-line script'
 
