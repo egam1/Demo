@@ -19,15 +19,18 @@ steps:
     echo completed wait
     dir
     echo %cd%
+    echo $(Build.Repository.LocalPath)
+    echo $(Build.SourcesDirectory)
+    echo $(System.DefaultWorkingDirectory)
 
 - script: |
     echo %cd%
     dir
     echo this is a multi line command
-    cd $(Build.StagingDirectory)
+    cd $(Build.Repository.LocalPath)
     dir
     echo %cd%
-    cd $(Build.StagingDirectory)/packages
+    cd $(Build.Repository.LocalPath)/packages
     dir
     echo %cd%
   displayName: 'Run a multi-line script'
