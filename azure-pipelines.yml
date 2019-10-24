@@ -36,5 +36,5 @@ steps:
     echo %cd%
     type foo.txt
   displayName: 'Run a multi-line script'
-  failOnStderr: true
+  failOnStderr: false
 
