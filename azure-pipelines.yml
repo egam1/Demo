@@ -15,7 +15,7 @@ steps:
 
 - script: |
     echo start of wait
-    timeout /T 5 > NUL
+    timeout /T 5
     echo completed wait
     dir
     echo %cd%
