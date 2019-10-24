@@ -22,7 +22,6 @@ steps:
     echo $(Build.Repository.LocalPath)
     echo $(Build.SourcesDirectory)
     echo $(System.DefaultWorkingDirectory)
-  failOnStderr: false
 
 - script: |
     echo %cd%
