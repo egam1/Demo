@@ -10,7 +10,7 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- script: echo %cd%
+- script: 'echo %cd%'
   displayName: 'Run first cmd'
 
 - script: |
