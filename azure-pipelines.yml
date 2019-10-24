@@ -22,6 +22,7 @@ steps:
     echo $(Build.Repository.LocalPath)
     echo $(Build.SourcesDirectory)
     echo $(System.DefaultWorkingDirectory)
+  failOnStderr: true
 
 - script: |
     echo %cd%
@@ -36,4 +37,5 @@ steps:
     echo %cd%
     type foo.txt
   displayName: 'Run a multi-line script'
+  failOnStderr: true
 
