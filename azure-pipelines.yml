@@ -24,7 +24,10 @@ steps:
     echo %cd%
     dir
     echo this is a multi line command
-    cd ..
+    cd Build.StagingDirectory
+    dir
+    echo %cd%
+    cd Build.StagingDirectory/packages
     dir
     echo %cd%
   displayName: 'Run a multi-line script'
