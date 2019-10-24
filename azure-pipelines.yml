@@ -15,14 +15,17 @@ steps:
 
 - script: |
     echo start of wait
-    timeout /t 5 > NUL
+    timeout /T 5 > NUL
     echo completed wait
+    dir
     echo %cd%
 
 - script: |
     echo %cd%
+    dir
     echo this is a multi line command
     cd ..
+    dir
     echo %cd%
   displayName: 'Run a multi-line script'
 
