@@ -14,6 +14,12 @@ steps:
   displayName: 'Run first cmd'
 
 - script: |
+    echo start of wait
+    timeout /t 5 > NUL
+    echo completed wait
+    echo %cd%
+
+- script: |
     echo %cd%
     echo this is a multi line command
     cd ..
