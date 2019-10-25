@@ -25,18 +25,10 @@ steps:
     echo $(System.DefaultWorkingDirectory)
   failOnStderr: false
 
-- script: |
-    echo %cd%
-    dir
-    echo this is a multi line command
-    cd $(Build.Repository.LocalPath)
-    dir
-    echo %cd%
-    cd foo
-    cd $(Build.Repository.LocalPath)/packages
-    dir
-    echo %cd%
-    type foo.txt
-  displayName: 'Run a multi-line script'
-  failOnStderr: false
-
+#     azureSubscription: 'Free Trial (e60e4250-e749-4da3-a098-04df412b24c5)'
+- task: Docker@2
+  inputs:
+    azureSubscription: 'Free Trial (e60e4250-e749-4da3-a098-04df412b24c5)'
+    repository: 'egam1/demo'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
