@@ -14,7 +14,7 @@ steps:
 - task: Docker@2
   inputs:
     connectionName: Azure Trial
-#    azureSubscription: 'Free Trial (e60e4250-e749-4da3-a098-04df412b24c5)'
+    azureSubscription: 'Free Trial (e60e4250-e749-4da3-a098-04df412b24c5)'
     azureContainerRegistry: '{"loginServer":"mycontainerregistryem.azurecr.io", "id" : "/subscriptions/e60e4250-e749-4da3-a098-04df412b24c5/resourceGroups/emResourcegrp/providers/Microsoft.ContainerRegistry/registries/myContainerRegistryEM"}'
     repository: 'egam1/demo'
     command: 'buildAndPush'
