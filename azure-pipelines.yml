@@ -7,24 +7,9 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  name: Azure Pipelines
 
 steps:
-- script: 'echo %cd%'
-  displayName: 'Run first cmd'
-
-- script: |
-    echo start of wait
-    timeout /T 5
-    echo completed wait
-    dir
-    echo %cd%
-    dir foo.txt /s
-    echo $(Build.Repository.LocalPath)
-    echo $(Build.SourcesDirectory)
-    echo $(System.DefaultWorkingDirectory)
-  failOnStderr: false
-
 #     azureSubscription: 'Free Trial (e60e4250-e749-4da3-a098-04df412b24c5)'
 - task: Docker@2
   inputs:
